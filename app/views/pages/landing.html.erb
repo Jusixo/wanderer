@@ -83,16 +83,98 @@
 
 
     <section>
-        <div class="container text-center wow fadeIn">
-            <h2>Photos</h2>
-            <hr class="colored">
+      <div class="container text-center wow fadeIn">
+        <h2>Photos</h2>
+          <hr class="colored">
             <div class="row">
-                <div class="col-lg-12">
+              <div class="col-lg-12">
+
+                <div id="portfoliolist">
+                  <div id="portfoliolist">
+                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
+                      <div class="portfolio-wrapper">
+                        <%= image_tag("sp1.jpg") %>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                <div id="portfoliolist">
+                  <div id="portfoliolist">
+                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
+                      <div class="portfolio-wrapper">
+                        <%= image_tag("sp2.jpg") %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="portfoliolist">
+                  <div id="portfoliolist">
+                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
+                      <div class="portfolio-wrapper">
+                        <%= image_tag("sp1.jpg") %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="portfoliolist">
+                  <div id="portfoliolist">
+                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
+                      <div class="portfolio-wrapper">
+                        <%= image_tag("sp2.jpg") %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="portfoliolist">
+                  <div id="portfoliolist">
+                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
+                      <div class="portfolio-wrapper">
+                        <%= image_tag("sp1.jpg") %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="portfoliolist">
+                  <div id="portfoliolist">
+                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
+                      <div class="portfolio-wrapper">
+                        <%= image_tag("sp2.jpg") %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
             </div>
-        </div>
+          </div>
     </section>
 
+    <section class="wander-click">
+      <div class="row">
+        <div class="container text-center">
+          <div class="col-md-4 wander-links">
+              <h4><i class="fa fa-chevron-circle-up"></i> Back to top</h4>
+
+            <!-- <a class="btn page-scroll" href="#top"><i class="fa fa-angle-up"></i>Back to top</a> -->
+
+          </div>
+          <div class="col-md-4 wander-links">
+              <h4><i class="fa fa-envelope"></i> Get Your Photos</h4>
+
+          </div>
+          <div class="col-md-4 wander-links">
+              <h4><i class="fa fa-sign-out"></i> Sign Out</h4>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
         <div class="container text-center">
@@ -113,20 +195,19 @@
                 </div>
             </div>
             <div class="row social">
-                <div class="col-lg-12">
-                  
-                    <ul class="list-inline">
-                        <li><a href=" https://twitter.com/Jusivxo"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/in/justin-valentine-171a82b1/"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
-                        </li>
-                        <li><a href="https://github.com/Jusixo"><i class="fa fa-github fa-fw fa-2x"></i></a></li>
-                    </ul>
-                </div>
+              <div class="col-lg-12">
+                  <ul class="list-inline">
+                      <li><a href=" https://twitter.com/Jusivxo"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
+                      </li>
+                      <li><a href="https://www.linkedin.com/in/justin-valentine-171a82b1/"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+                      </li>
+                      <li><a href="https://github.com/Jusixo"><i class="fa fa-github fa-fw fa-2x"></i></a></li>
+                  </ul>
+              </div>
             </div>
             <div class="row copyright">
                 <div class="col-lg-12">
-                    <p class="small">&copy; 2017 Justin Valentine </p>
+                    <p class="small">&copy; <%= Time.now.year %> Justin Valentine </p>
                 </div>
             </div>
         </div>
