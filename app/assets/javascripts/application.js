@@ -11,5 +11,13 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require 'jquery'
 
 //= require 'cable'
+//= require 'bootstrap'
+
+//= require 'theme/jquery.mixitup'
+//= require 'theme/classie'
+//= require 'theme/cbpAnimatedHeader'
+//= require 'theme/vitality'
+//= require 'theme/classie'
