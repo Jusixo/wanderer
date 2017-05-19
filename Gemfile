@@ -22,7 +22,9 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'jquery-rails'
 
-
+gem 'shrine'
+gem 'shrine-sql'
+gem 'roda'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
