@@ -1,24 +1,19 @@
-# README
+#Wanderer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+-pull screen capture from ffmpeg video during live stream
 
-Things you may want to cover:
+-send captured images to the wanderer database
 
-* Ruby version
+-add Host, User models
 
-* System dependencies
+-make sure nested resources are all correct
 
-* Configuration
+-create oauth login for facebook with appropriate links.
 
-* Database creation
+-create favoriting system between user and photos
 
-* Database initialization
+-create mailer that sends users favorited photos
 
-* How to run the test suite
+-create mailer that sends Hosts all photos and videos captured during the event
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-have images added to the database appear on the landing page with a live update not needing a page refresh
