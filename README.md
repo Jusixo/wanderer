@@ -1,6 +1,6 @@
 #Wanderer
 
--pull screen capture from ffmpeg video during live stream
+-pull screen capture from ffmpeg video during live stream ***
 
 -send captured images to the wanderer database
 
