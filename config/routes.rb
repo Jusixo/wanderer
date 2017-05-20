@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :hosts
+  resources :users
   resources :events
   get 'pages/landing'
   root 'pages#landing'
