@@ -10,10 +10,11 @@
 
 -create oauth login for facebook with appropriate links.
 
--create favoriting system between user and photos
+-create favoriting system between user and photos / creating host form page.
+
 
 -create mailer that sends users favorited photos
 
--create mailer that sends Hosts all photos and videos captured during the event
+-create mailer that sends Hosts all photos and videos captured during the event, and email addresses. 
 
 -have images added to the database appear on the landing page with a live update not needing a page refresh
