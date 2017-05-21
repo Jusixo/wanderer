@@ -51,6 +51,6 @@ class EventsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def event_params
-    params.require(:event).permit(photo_attributes [:image])
+    params.require(:event).permit(:image)
   end
 end

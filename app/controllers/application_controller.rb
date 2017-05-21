@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-protect_from_forgery with: :exception
+
+
+  protect_from_forgery with: :exception
   # Assign the current user
   def current_user=(user)
     session[:user_id] = user.id
@@ -22,4 +24,5 @@ protect_from_forgery with: :exception
       redirect_to auth_path(provider: 'facebook')
     end
   end
+
 end

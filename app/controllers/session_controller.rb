@@ -8,9 +8,9 @@ class SessionController < ApplicationController
     self.current_user = User.from_omniauth(request.env['omniauth.auth'])
 
     if current_user
-      redirect_to root_path
+      redirect_to auctions_path
     else
-      redirect_to auth_path(provider: 'facebook')
+      redirect_to auth_path(provider: authentication_data['provider'])
     end
   end
 
@@ -22,7 +22,7 @@ class SessionController < ApplicationController
 
   # Show the failure page
   def failure
-    #create failure.html.erb
+    flash[:notice] = "Login Failed"
+    redirect_to root_path
   end
-
 end
