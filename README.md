@@ -1,10 +1,6 @@
 #Wanderer
 
 
--create oauth login for facebook with appropriate links.
--currently issues with shrine and omniauth for facebook.
-
-
 ###still need!
 
 -pull screen capture from ffmpeg video during live stream ***
@@ -15,6 +11,7 @@
 
 
 -make sure nested resources are all correct
+  Turn host into admin, give admin ability to adjust information about events. 
 
 
 
