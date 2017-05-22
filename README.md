@@ -23,5 +23,5 @@
 
 
 -create mailer that sends users favorited photos
-
+-
 -create mailer that sends Hosts all photos and videos captured during the event, and email addresses.
