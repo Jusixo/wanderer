@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   resources :hosts
   resources :users
   resources :events
@@ -17,5 +16,5 @@ Rails.application.routes.draw do
   get '/logout' => 'session#destroy'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  # mount Shrine::DownloadEndpoint => "/attachments"
+  mount Shrine::DownloadEndpoint => "/attachments"
 end

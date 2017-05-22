@@ -11,8 +11,10 @@
 
 
 -make sure nested resources are all correct
+
   Turn host into admin, give admin ability to adjust information about events.
 
+  Turn host into admin, give admin ability to adjust information about events.
 
 
 -create favoriting system between user and photos / creating host form page.
