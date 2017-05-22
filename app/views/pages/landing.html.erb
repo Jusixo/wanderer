@@ -34,23 +34,23 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
+                      <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">EVENT</a>
+                      <a class="page-scroll" href="#about">EVENT</a>
                     </li>
-                      <%- if logged_in? %>
-                        <li>
-                            WELCOME <%= current_user.name %>
-                        </li>
-                        <li>
-                          <%= link_to "LOGOUT", logout_path, data: { confirm: 'Are you sure?' }, class: "navbar-text" %>
-                        </li>
-                      <%- else %>
-                        <li>
-                          <%= link_to auth_path(provider: 'facebook') do %>SIGN IN<% end %>
-                        </li>
-                      <% end %>
+                    <%- if logged_in? %>
+                    <li>
+                      <a><%= current_user.name.upcase %> </a>
+                    </li>
+                    <li>
+                      <%= link_to "LOGOUT", logout_path, data: { confirm: 'Are you sure?' } %>
+                    </li>
+                    <%- else %>
+                    <li>
+                      <%= link_to auth_path(provider: 'facebook') do %>SIGN IN<% end %>
+                    </li>
+                    <% end %>
 
                 </ul>
             </div>
@@ -171,7 +171,7 @@
         <div class="container text-center">
           <div class="col-md-4 wander-links">
 
-            <h4><a class="btn page-scroll" href="#top"><i class="fa fa-chevron-circle-up"></i>Back to top</a></h4>
+            <a class="btn page-scroll" href="#top"><h4><i class="fa fa-chevron-circle-up"></i>Back to top</h4></a>
 
           </div>
           <div class="col-md-4 wander-links">
@@ -179,8 +179,11 @@
 
           </div>
           <div class="col-md-4 wander-links">
+              <%= link_to logout_path, data: { confirm: 'Are you sure?' } do %>
               <h4><i class="fa fa-sign-out"></i> Sign Out</h4>
+              <% end %>
           </div>
+
         </div>
       </div>
     </section>
@@ -193,8 +196,9 @@
                     <p>813-210-5528</p>
                 </div>
                 <div class="col-md-4 contact-details">
-                    <h4><i class="fa fa-map-marker"></i> Visit</h4>
-                    <p>The Iron Yard</p>
+                  <%= link_to hosts_path do %>
+                    <h4><i class="fa fa-clipboard"></i>Host Sign in</h4>
+                  <% end %>
                 </div>
                 <div class="col-md-4 contact-details">
                     <h4><i class="fa fa-envelope"></i> Email</h4>
