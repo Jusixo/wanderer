@@ -17,7 +17,7 @@
   <div class="form-group">
     <%= f.label :image, class: "col-sm-2 control-label"%>
     <div class="col-sm-10">
-      <%= f.hidden_field :image, value: @event.photos.image_data %>
+      <%= f.hidden_field :image, value: @event.photos %>
       <%= f.file_field :image %>
     </div>
   </div>
