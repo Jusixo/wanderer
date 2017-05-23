@@ -98,69 +98,17 @@
           <hr class="colored">
             <div class="row">
               <div class="col-lg-12">
-
                 <div id="portfoliolist">
-                  <div id="portfoliolist">
-                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
-                      <div class="portfolio-wrapper">
-                        <%= image_tag("sp1.jpg") %>
+                  <% @event.photos.each do |photo| %>
+                    <% if photo.image_data %>
+                      <div class="portfolio">
+                        <div class="portfolio-wrapper">
+                          <%= image_tag(photo.image_url(:small), class: "small") %>
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                    <% end %>
+                  <% end %>
                 </div>
-
-                <div id="portfoliolist">
-                  <div id="portfoliolist">
-                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
-                      <div class="portfolio-wrapper">
-                        <%= image_tag("sp2.jpg") %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="portfoliolist">
-                  <div id="portfoliolist">
-                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
-                      <div class="portfolio-wrapper">
-                        <%= image_tag("sp1.jpg") %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="portfoliolist">
-                  <div id="portfoliolist">
-                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
-                      <div class="portfolio-wrapper">
-                        <%= image_tag("sp2.jpg") %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="portfoliolist">
-                  <div id="portfoliolist">
-                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
-                      <div class="portfolio-wrapper">
-                        <%= image_tag("sp1.jpg") %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="portfoliolist">
-                  <div id="portfoliolist">
-                    <div class="portfolio identity" data-cat="identity" href="#portfolioModal1">
-                      <div class="portfolio-wrapper">
-                        <%= image_tag("sp2.jpg") %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-                <%= << image_tag @event.photo %>
               </div>
             </div>
           </div>
@@ -197,13 +145,11 @@
                     <p>813-210-5528</p>
                 </div>
                 <div class="col-md-4 contact-details">
-                </li>
-                  <%- if admin_logged_in? %>
-                <li>
+                    <%- if admin_logged_in? %>
+                    <%= link_to "New Event", new_event_path %>
                     <%= link_to signout_path, data: { confirm: 'Are you sure?' } do %>
-                    <h4><i class="fa fa fa-sign-out"></i>Admin sign out</h4>
+                    <p><i class="fa fa fa-sign-out"></i>Admin sign out</p>
                     <% end %>
-                </li>
                   <%- else %>
                     <%= link_to signin_path do %>
                       <h4><i class="fa fa-clipboard"></i>Admin Sign in</h4>
