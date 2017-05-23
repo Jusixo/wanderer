@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   resources :hosts
   resources :users
-  resources :events
+  resources :events do
+    resources :photos
+  end
 
   get 'pages/landing'
   root 'pages#landing'

@@ -3,16 +3,12 @@
 
 ###still need!
 
--pull screen capture from ffmpeg video during live stream ***
-
--send captured images to the wanderer database
+use shrine to upload images to page from background folder(?).
 -have images added to the database appear on the landing page with a live update not needing a page refresh
 
 
 
 -make sure nested resources are all correct
-
-  Turn host into admin, give admin ability to adjust information about events.
 
   Turn host into admin, give admin ability to adjust information about events.
 
