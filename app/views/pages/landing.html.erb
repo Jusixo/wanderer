@@ -39,7 +39,7 @@
                     <li>
                       <a class="page-scroll" href="#about">EVENT</a>
                     </li>
-                    <%- if logged_in? %>
+                    <%- if user_logged_in? %>
                     <li>
                       <a><%= current_user.name.upcase %> </a>
                     </li>
@@ -160,7 +160,7 @@
                 </div>
 
 
-
+                <%= << image_tag @event.photo %>
               </div>
             </div>
           </div>
@@ -179,6 +179,7 @@
 
           </div>
           <div class="col-md-4 wander-links">
+
               <%= link_to logout_path, data: { confirm: 'Are you sure?' } do %>
               <h4><i class="fa fa-sign-out"></i> Sign Out</h4>
               <% end %>
@@ -196,8 +197,17 @@
                     <p>813-210-5528</p>
                 </div>
                 <div class="col-md-4 contact-details">
-                  <%= link_to events_path do %>
-                    <h4><i class="fa fa-clipboard"></i>image add</h4>
+                </li>
+                  <%- if admin_logged_in? %>
+                <li>
+                    <%= link_to signout_path, data: { confirm: 'Are you sure?' } do %>
+                    <h4><i class="fa fa fa-sign-out"></i>Admin sign out</h4>
+                    <% end %>
+                </li>
+                  <%- else %>
+                    <%= link_to signin_path do %>
+                      <h4><i class="fa fa-clipboard"></i>Admin Sign in</h4>
+                    <% end %>
                   <% end %>
                 </div>
                 <div class="col-md-4 contact-details">

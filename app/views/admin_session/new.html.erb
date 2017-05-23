@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="custom-form-signin">
+    <%= form_tag(signin_path, html: { class: "form-horizontal", role: "form" }) do %>
+    <h2 class="form-signin-heading">Host Login</h2>
+    <div class="field">
+      <%= label_tag :email %>
+      <%= text_field_tag :email, nil, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= label_tag :password %>
+      <%= password_field_tag :password, nil, class: "form-control" %>
+    </div>
+    <%= submit_tag "Submit", class: "btn btn-primary" %>
+    <% end %>
+      <%= link_to "Signup", signup_path %>
+  </div>
+</div>

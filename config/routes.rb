@@ -17,6 +17,13 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   get '/logout' => 'session#destroy'
 
+  get '/signup' => 'admins#new'
+  post '/admins' => 'admins#create'
+
+  get  '/signin'   => 'admin_session#new'
+  post '/signin'   => 'admin_session#create'
+  get  '/signout'  => 'admin_session#destroy'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   mount Shrine::DownloadEndpoint => "/attachments"
 end
