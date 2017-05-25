@@ -91,7 +91,6 @@
         </div>
     </section>
 
-
     <section>
       <div class="container text-center wow fadeIn">
         <h2>Photos</h2>
@@ -146,7 +145,7 @@
                 </div>
                 <div class="col-md-4 contact-details">
                     <%- if admin_logged_in? %>
-                    <%= link_to "New Event", new_event_path %>
+                    <%= link_to "New Photo", new_event_photo_path(@event) %>
                     <%= link_to signout_path, data: { confirm: 'Are you sure?' } do %>
                     <p><i class="fa fa fa-sign-out"></i>Admin sign out</p>
                     <% end %>

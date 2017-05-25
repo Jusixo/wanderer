@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170523165809) do
+ActiveRecord::Schema.define(version: 20170524154148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,8 +26,16 @@ ActiveRecord::Schema.define(version: 20170523165809) do
   create_table "events", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "photo_id"
-    t.index ["photo_id"], name: "index_events_on_photo_id"
+    t.string "event_name"
+    t.string "web_link"
+    t.string "event_info"
+    t.bigint "admin_id"
+    t.index ["admin_id"], name: "index_events_on_admin_id"
+  end
+
+  create_table "files", force: :cascade do |t|
+    t.binary "content"
+    t.text "metadata"
   end
 
   create_table "hosts", force: :cascade do |t|
@@ -42,7 +50,8 @@ ActiveRecord::Schema.define(version: 20170523165809) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "image_data"
-    t.integer "event_id"
+    t.bigint "event_id"
+    t.index ["event_id"], name: "index_photos_on_event_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,5 +65,6 @@ ActiveRecord::Schema.define(version: 20170523165809) do
     t.string "access_token"
   end
 
-  add_foreign_key "events", "photos"
+  add_foreign_key "events", "admins"
+  add_foreign_key "photos", "events"
 end
