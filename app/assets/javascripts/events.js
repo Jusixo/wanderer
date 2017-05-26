@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     console.log(`clicked on a heart ${eventid}`)
 
-    let url = favorited ? `/events/${eventsid}/photos/${photoid}/unfavorite` : `/events/${eventsid}/photos/${photoid}/favorite`
+    let url = favorited ? `/events/${eventid}/photos/${photoid}/unfavorite` : `/events/${eventid}/photos/${photoid}/favorite`
 
     $.ajax({
       method: 'POST',

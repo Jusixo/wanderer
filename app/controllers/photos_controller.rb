@@ -28,8 +28,6 @@ class PhotosController < ApplicationController
     @photo = @event.photos.find(params[:id])
 
     Favorite.create(photo: @photo, user: current_user)
-
-    Rails.logger.info "FAVORITING ITEM #{@photo.name}"
   end
 
   def unfavorite
