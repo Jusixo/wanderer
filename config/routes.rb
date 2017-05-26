@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   resources :hosts
   resources :users
   resources :events do
-    resources :photos
+    resources :photos do
+      member do
+        post 'favorite'
+        post 'unfavorite'
+      end
+    end
   end
 
   get 'pages/landing'

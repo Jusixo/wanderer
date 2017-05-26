@@ -23,6 +23,26 @@ class PhotosController < ApplicationController
     redirect_to root_path, notice: 'Photo was successfully destroyed.'
   end
 
+  def favorite
+    @event = Event.find(params[:event_id])
+    @photo = @event.photos.find(params[:id])
+
+    Favorite.create(photo: @photo, user: current_user)
+
+    Rails.logger.info "FAVORITING ITEM #{@photo.name}"
+  end
+
+  def unfavorite
+    @event = Event.find(params[:event_id])
+    @photo = @event.photo.find(params[:id])
+
+    favorite = Favorite.find_by(photo: @photo, user: current_user)
+    favorite.destroy
+
+    Rails.logger.info "UNFAVORITING ITEM #{@photo.name}"
+  end
+
+
   private
 
   # Only allow a trusted parameter "white list" through.

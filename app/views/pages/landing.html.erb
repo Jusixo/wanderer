@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                  <%= image_tag("theme/logo.png", class: "img-responsive") %>
+                  <%= image_tag("wanderer1.png", class: "img-responsive") %>
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,7 +62,7 @@
     <header class="video fs-background-element fs-background">
         <div class="overlay"></div>
         <div class="intro-content">
-            <%= image_tag("theme/profile.png", class: "img-responsive img-centered") %>
+            <%= image_tag("bldskr.png", class: "img-responsive img-centered") %>
             <div class="brand-name">Wanderer</div>
             <hr class="colored">
             <div class="brand-name-subtext">by Justin</div>
@@ -102,6 +102,7 @@
                     <% if photo.image_data %>
                       <div class="portfolio">
                         <div class="portfolio-wrapper">
+                          <span data-event-id="<%= @event.id %>" data-photo-id="<%= photo.id %>" class="favorite-photo fa fa-star <%= favorited_class(photo, current_user) %>" aria-hidden="true" style="padding-left:320px;"></span>
                           <%= image_tag(photo.image_url(:small), class: "small") %>
                         </div>
                       </div>

@@ -22,3 +22,4 @@
 //= require 'theme/vitality'
 //= require 'theme/classie'
 //= require 'theme/wow/wow.min'
+//= require 'events'

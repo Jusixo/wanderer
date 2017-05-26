@@ -15,5 +15,8 @@ class User < ApplicationRecord
     Rails.logger.debug "After saving, the user is #{user.inspect}"
 
     return user
-    end
+  end
+
+  has_many :favorites
+
 end

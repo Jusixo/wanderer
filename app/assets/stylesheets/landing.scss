@@ -6,3 +6,12 @@
 header.video {
   background-image: image-url('mount.jpg');
 }
+
+.favorite-photo {
+  color: rgb(203, 203, 203);
+}
+
+
+.favorite-photo.favorited {
+  color: rgb(37, 179, 69);
+}
