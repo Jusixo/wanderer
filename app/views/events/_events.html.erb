@@ -12,6 +12,9 @@
                   <div class="portfolio">
                     <div class="portfolio-wrapper">
                       <%= link_to event do %>
+                      <%- if user_logged_in? %>
+                        <span data-event-id="<%= @event.id %>" data-photo-id="<%= photo.id %>" class="favorite-photo fa fa-star <%= favorited_class(photo, current_user) %>" aria-hidden="true" style="padding-left:320px;"></span>
+                      <% end %>
 
                       <%= image_tag("logo.png", class: "img-responsive img-centered") %>
 
