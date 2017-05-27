@@ -90,99 +90,10 @@
             </div>
         </div>
     </section>
+  <div class="container">
+    <%= render 'events/events' %>
+  </div>
 
-    <section>
-      <div class="container text-center wow fadeIn">
-        <h2>Photos</h2>
-          <hr class="colored">
-            <div class="row">
-              <div class="col-lg-12">
-                <div id="portfoliolist">
-                  <% @event.photos.each do |photo| %>
-                    <% if photo.image_data %>
-                      <div class="portfolio">
-                        <div class="portfolio-wrapper">
-                          <%- if user_logged_in? %>
-                          <span data-event-id="<%= @event.id %>" data-photo-id="<%= photo.id %>" class="favorite-photo fa fa-star <%= favorited_class(photo, current_user) %>" aria-hidden="true" style="padding-left:320px;"></span>
-                          <% end %>
-                          <%= image_tag(photo.image_url(:medium), class: "medium") %>
-                        </div>
-                      </div>
-                    <% end %>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-          </div>
-    </section>
-
-    <section class="wander-click">
-      <div class="row">
-        <div class="container text-center">
-          <div class="col-md-4 wander-links">
-
-            <a class="btn page-scroll" href="#top"><h4><i class="fa fa-chevron-circle-up"></i>Back to top</h4></a>
-
-          </div>
-          <div class="col-md-4 wander-links">
-              <h4><i class="fa fa-envelope"></i> Get Your Photos</h4>
-
-          </div>
-          <div class="col-md-4 wander-links">
-
-              <%= link_to logout_path, data: { confirm: 'Are you sure?' } do %>
-              <h4><i class="fa fa-sign-out"></i> Sign Out</h4>
-              <% end %>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-4 contact-details">
-                    <h4><i class="fa fa-phone"></i> Call</h4>
-                    <p>813-210-5528</p>
-                </div>
-                <div class="col-md-4 contact-details">
-                    <%- if admin_logged_in? %>
-                    <%= link_to "New Photo", new_event_photo_path(@event) %>
-                    <%= link_to signout_path, data: { confirm: 'Are you sure?' } do %>
-                    <p><i class="fa fa fa-sign-out"></i>Admin sign out</p>
-                    <% end %>
-                  <%- else %>
-                    <%= link_to signin_path do %>
-                      <h4><i class="fa fa-clipboard"></i>Admin Sign in</h4>
-                    <% end %>
-                  <% end %>
-                </div>
-                <div class="col-md-4 contact-details">
-                    <h4><i class="fa fa-envelope"></i> Email</h4>
-                    <p>
-                      <a href="mailto:Justinvalentine88@gmail.com">JustinValentine88@gmail.com</a>
-                    </p>
-                </div>
-            </div>
-            <div class="row social">
-              <div class="col-lg-12">
-                  <ul class="list-inline">
-                      <li><a href=" https://twitter.com/Jusivxo"><i class="fa fa-twitter fa-fw fa-2x"></i></a>
-                      </li>
-                      <li><a href="https://www.linkedin.com/in/justin-valentine-171a82b1/"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
-                      </li>
-                      <li><a href="https://github.com/Jusixo"><i class="fa fa-github fa-fw fa-2x"></i></a></li>
-                  </ul>
-              </div>
-            </div>
-            <div class="row copyright">
-                <div class="col-lg-12">
-                    <p class="small">&copy; <%= Time.now.year %> Justin Valentine </p>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 
 </html>
