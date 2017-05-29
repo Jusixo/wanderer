@@ -28,6 +28,7 @@ class PhotosController < ApplicationController
     @photo = @event.photos.find(params[:id])
 
     Favorite.create(photo: @photo, user: current_user)
+    NotificationsMailer.favorite(photo, curret_user).deliver_later
   end
 
   def unfavorite
@@ -37,7 +38,7 @@ class PhotosController < ApplicationController
     favorite = Favorite.find_by(photo: @photo, user: current_user)
     favorite.destroy
 
-    Rails.logger.info "UNFAVORITING ITEM #{@photo.name}"
+    Rails.logger.info "UNFAVORITING #{@photo.name}"
   end
 
 
