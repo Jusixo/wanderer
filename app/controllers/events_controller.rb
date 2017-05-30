@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   # GET /events
   def index
-    @events = Event.all
+    redirect_to root_path
   end
 
   # GET /events/1
@@ -25,7 +25,7 @@ class EventsController < ApplicationController
     @event.admin = current_admin
 
     if @event.save
-      redirect_to @event, notice: 'Event was successfully created.'
+      redirect_to @event
     else
       render :new
     end
@@ -35,7 +35,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     if @event.update(event_params)
-      redirect_to @event, notice: 'Event was successfully updated.'
+      redirect_to @event
     else
       render :edit
     end
@@ -45,7 +45,7 @@ class EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to events_url, notice: 'Event was successfully destroyed.'
+    redirect_to root_path
   end
 
   def favorite
