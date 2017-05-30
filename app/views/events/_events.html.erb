@@ -1,7 +1,4 @@
-
-  <div class="page-header">
-
-      <section>
+    <section>
       <%- @events.each do |event| %>
       <div class="container text-center wow fadeIn">
         <h2>Events</h2>
@@ -12,12 +9,10 @@
                   <div class="portfolio">
                     <div class="portfolio-wrapper">
                       <%= link_to event do %>
-                      <%- if user_logged_in? %>
-                        <span data-event-id="<%= @event.id %>" data-photo-id="<%= photo.id %>" class="favorite-photo fa fa-star <%= favorited_class(photo, current_user) %>" aria-hidden="true" style="padding-left:320px;"></span>
-                      <% end %>
+                        <%- if user_logged_in? %>
+                        <% end %>
 
-                      <%= image_tag("logo.png", class: "img-responsive img-centered") %>
-
+                        <%= image_tag("logo.png", class: "img-responsive img-centered") %>
                       <% end %>
                     </div>
                   </div>
@@ -28,11 +23,10 @@
           <% end %>
     </section>
 
-
-      <tbody class="table-body">
+    <table>
+      <tbody>
         <%- @events.each do |event| %>
         <tr>
-
           <td>
             <%= link_to new_event_path do %>
             <span class="glyphicon glyphicon-plus"></span>

@@ -37,7 +37,7 @@
                       <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                      <a class="page-scroll" href="#about">EVENT</a>
+                      <a class="page-scroll" href="#about">EVENTS</a>
                     </li>
                     <%- if user_logged_in? %>
                     <li>
@@ -73,12 +73,16 @@
     </header>
 
 
-    <section class="events">
-      <div class="container">
-        <%= render 'events/events' %>
-      </div>
+    <section id="about">
+        <div class="container-fluid">
+          <div class="row text-center">
+            <div class="col-lg-12 wow fadeIn">
+              <%= render 'events/events' %>
+            </div>
+          </div>
+        </div>
     </section>
-    
+
   <footer class="footer">
         <div class="container text-center">
             <div class="row">
@@ -87,10 +91,7 @@
                     <p>813-210-5528</p>
                 </div>
                 <div class="col-md-4 contact-details">
-
-
-                    <%- if admin_logged_in? %>
-
+                  <%- if admin_logged_in? %>
                     <%= link_to "New Photo", new_event_photo_path(@event) %>
                     <%= link_to signout_path, data: { confirm: 'Are you sure?' } do %>
                     <p><i class="fa fa fa-sign-out"></i>Admin sign out</p>

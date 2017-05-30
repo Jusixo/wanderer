@@ -22,4 +22,21 @@ $(document).ready(function() {
       dataType: 'script'
     })
   })
+
+    let inner = document.getElementById('embeddedvideo')
+    let canvas = document.getElementById('canvas')
+    let context = canvas.getContext('2d')
+
+    canvas.width = 500
+    canvas.height = 600
+
+    iframe2image(inner, function (err, img) {
+      console.log('Inside the iframe2image')
+      // If there is an error, log it
+      if (err) { return console.error(err); }
+
+      // Otherwise, add the image to the canvas
+      context.drawImage(img, 0, 0);
+      console.log('Grabbed an image')
+    });
 })
