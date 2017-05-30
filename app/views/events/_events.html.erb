@@ -1,8 +1,6 @@
     <section>
       <%- @events.each do |event| %>
       <div class="container text-center wow fadeIn">
-        <h2>Events</h2>
-          <hr class="colored">
             <div class="row">
               <div class="col-lg-12">
                 <div id="portfoliolist">
@@ -26,6 +24,7 @@
     <table>
       <tbody>
         <%- @events.each do |event| %>
+        <%- if admin_logged_in? %>
         <tr>
           <td>
             <%= link_to new_event_path do %>
@@ -44,6 +43,7 @@
             <% end %>
           </td>
         </tr>
+        <% end %>
         <% end %>
       </tbody>
     </table>

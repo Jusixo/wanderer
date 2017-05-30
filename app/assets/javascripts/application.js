@@ -23,6 +23,6 @@
 //= require 'theme/vitality'
 //= require 'theme/classie'
 //= require 'theme/wow/wow.min'
-//= require 'iframe2image/iframe2image.min'
+//= require 'html2canvas'
 
 //= require 'events'

@@ -13,9 +13,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <p class="navbar-brand page-scroll">
+                  <%= link_to root_path do %>
                   <%= image_tag("wanderer1.png", class: "img-responsive") %>
-                </a>
+                  <% end %>
+                </p>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -58,12 +60,11 @@
             <div class="row text-center content-row">
               <div class="container">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe id='embeddedvideo' class="embed-responsive-item" src="https://www.youtube.com/embed/TdHryaGbunI"></iframe>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/8OX-x5j2N4E" frameborder="0" allowfullscreen></iframe>
                 </div>
               </div>
               <%= link_to "Please Check out our Site", @event.web_link%>
               <span class="btn btn-primary demo">GRAB PHOTO</span>
-              <canvas id="canvas"></canvas>
             </div>
         </div>
     </section>

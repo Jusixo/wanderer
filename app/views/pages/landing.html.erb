@@ -41,7 +41,7 @@
                     </li>
                     <%- if user_logged_in? %>
                     <li>
-                      <a><%= current_user.name.upcase %> </a>
+                      <a><%= current_user.name.upcase %></a>
                     </li>
                     <li>
                       <%= link_to "LOGOUT", logout_path, data: { confirm: 'Are you sure?' } %>
@@ -76,12 +76,17 @@
     <section id="about">
         <div class="container-fluid">
           <div class="row text-center">
-            <div class="col-lg-12 wow fadeIn">
-              <%= render 'events/events' %>
+            <h2>Events</h2>
+              <hr class="colored">
+              <div class="row">
+              <div class="col-lg-12 wow fadeIn">
+                <%= render 'events/events' %>
+
             </div>
           </div>
         </div>
     </section>
+
 
   <footer class="footer">
         <div class="container text-center">
