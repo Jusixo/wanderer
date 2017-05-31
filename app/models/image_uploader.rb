@@ -12,7 +12,7 @@ class ImageUploader < Shrine
 
     size_800 = resize_to_fill!(original, 800, 800) { |cmd| cmd.auto_orient } # orient rotated images
     size_500 = resize_to_fill(size_800,  500, 500)
-    size_300 = resize_to_fill(size_500,  355, 240)
+    size_300 = resize_to_fill(size_500,  240, 240)
     size_thumbnail = resize_to_fill(size_300, 64, 64)
 
     {original: io, large: size_800, medium: size_500, small: size_300, thumbnail: size_thumbnail}

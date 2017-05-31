@@ -47,8 +47,8 @@ input.form-control:focus {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #5cb85c;
+  background-color: #1724d4;
+  border-color: #5a5b61;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -60,7 +60,7 @@ input.form-control:focus {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #4cae4c;
+  background-color: #2c38a2;
   border-color: #49a749;
 }
 .btn-primary:active,
@@ -99,7 +99,7 @@ body {
   font-weight: 300;
 }
 a {
-  color: #5cb85c;
+  color: #1724d4;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -820,7 +820,7 @@ aside.cta-quote span.quote {
 #portfoliolist .portfolio .portfolio-wrapper {
   overflow: hidden;
   position: relative !important;
-  background: #222222;
+  background: white;
   cursor: pointer;
 }
 #portfoliolist .portfolio .portfolio-wrapper img {

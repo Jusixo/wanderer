@@ -1,9 +1,12 @@
-<div class="page-header">
-  <%= link_to event_path(@event) , class: 'btn btn-default' do %>
-    <span class="glyphicon glyphicon-list-alt"></span>
-    Back
-  <% end %>
-  <h1>New Photo</h1>
+<div class="container new-event">
+  <div class="well">
+  <div class="page-header">
+    <%= link_to event_path(@event) , class: 'btn btn-default' do %>
+      <span class="glyphicon glyphicon-list-alt"></span>
+      Back
+    <% end %>
+    <h1>New Photo</h1>
+  </div>
+  <%= render 'form' %>
+  </div>
 </div>
-
-<%= render 'form' %>
