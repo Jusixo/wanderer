@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   post '/signin'   => 'admin_session#create'
   get  '/signout'  => 'admin_session#destroy'
 
+  get '/send_mail' => 'user_mail#send_mail', as: :send_mail
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   mount Shrine::DownloadEndpoint => "/attachments"
 end

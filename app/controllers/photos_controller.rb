@@ -33,12 +33,12 @@ class PhotosController < ApplicationController
 
   def unfavorite
     @event = Event.find(params[:event_id])
-    @photo = @event.photo.find(params[:id])
+    @photo = @event.photos.find(params[:id])
 
     favorite = Favorite.find_by(photo: @photo, user: current_user)
     favorite.destroy
 
-    Rails.logger.info "UNFAVORITING #{@photo.name}"
+    Rails.logger.info "UNFAVORITING #{@photo.id}"
   end
 
 

@@ -1,8 +1,7 @@
 class NotificationsMailer < ApplicationMailer
-  def favorite
-
-    @user = current_user
-    @favorite = favorite.all
+  def favorited_mail(favorites, user)
+    @user = user
+    @favorites = favorites.find_by(params[:id])
 
     mail(to: @user.email, subject: 'Thank you for attending our event!')
   end
