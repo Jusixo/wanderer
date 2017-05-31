@@ -15,7 +15,6 @@
                 <%- if user_logged_in? %>
                 <% end %>
 
-                <%= image_tag("logo.png", class: "img-responsive img-centered") %>
 
                 <%- if admin_logged_in? %>
                   <%= link_to edit_event_path(event) do %>

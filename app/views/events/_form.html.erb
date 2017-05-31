@@ -16,6 +16,7 @@
 
 
 
+
   <%# event_name %>
   <div class="form-group">
     <%= f.label :event_name, class: "col-sm-2 control-label" %>
@@ -27,7 +28,7 @@
 
   <%# web_link %>
   <div class="form-group">
-    <%= f.label :web_link, class: "col-sm-2 control-label" %>
+    <%= f.label :Host_website_link, class: "col-sm-2 control-label" %>
     <div class="col-md-8">
       <%= f.text_field :web_link, class: "form-control" %>
     </div>
@@ -36,9 +37,18 @@
 
   <%# event_info %>
   <div class="form-group">
-    <%= f.label :event_info, class: "col-sm-2 control-label" %>
+    <%= f.label :event_information, class: "col-sm-2 control-label" %>
     <div class="col-md-8">
       <%= f.text_field :event_info, class: "form-control" %>
+    </div>
+  </div>
+
+  <%# image_data %>
+  <div class="form-group">
+    <%= f.label :Event_Hosts_logo, class: "col-sm-2 control-label"%>
+    <div class="col-sm-10">
+      <%= f.hidden_field :image, value: @event.image_data %>
+      <%= f.file_field :image %>
     </div>
   </div>
 
@@ -48,4 +58,9 @@
       <%= f.submit class: "btn btn-primary" %>
     </div>
   </div>
+
+
+
+
+
 <% end -%>
