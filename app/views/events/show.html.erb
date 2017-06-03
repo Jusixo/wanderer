@@ -15,10 +15,10 @@
                 <div class="container">
                   <%= link_to "Please Check out our Site", @event.web_link, class: "btn btn-primary" %>
                   <div class="embed-responsive embed-responsive-16by9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8OX-x5j2N4E" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/liEbIbGJRO8" frameborder="0" allowfullscreen></iframe>
                   </div>
                 </div>
-                <span class="btn btn-primary demo">GRAB PHOTO</span>
+                <%= link_to "GRAB PHOTO", grab_event_photos_path(@event), class: "btn btn-primary" %>
               </div>
           </div>
       </section>
@@ -39,7 +39,7 @@
                           <%- if user_logged_in? %>
                           <span data-event-id="<%= @event.id %>" data-photo-id="<%= photo.id %>" class="favorite-photo fa fa-star <%= favorited_class(photo, current_user) %>" aria-hidden="true" style="padding-left:320px;"></span>
                           <% end %>
-                          <%= image_tag(photo.image_url(:medium), class: "medium") %>
+                          <%= image_tag photo.image_url(:medium) unless article.image.blank? %>
                         </div>
                       </div>
                     <% end %>
