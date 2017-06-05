@@ -39,7 +39,11 @@
                           <%- if user_logged_in? %>
                           <span data-event-id="<%= @event.id %>" data-photo-id="<%= photo.id %>" class="favorite-photo fa fa-star <%= favorited_class(photo, current_user) %>" aria-hidden="true" style="padding-left:320px;"></span>
                           <% end %>
-                          <%= image_tag photo.image_url(:medium) unless article.image.blank? %>
+                          <%- if photo.image_url? %>
+                          <%= image_tag(photo.image_url(:medium), class: "medium") %>
+                          <% else %>
+                            No attachment Available!
+                          <% end %>
                         </div>
                       </div>
                     <% end %>
