@@ -7,7 +7,7 @@
 <section>
   <div class="col-lg-12">
     <div id="portfoliolist">
-      <%- @events.each do |event| %>
+      <%- @events.reverse_each do |event| %>
         <%= link_to event do %>
       <div class="portfolio">
         <div class="portfolio-wrapper">
