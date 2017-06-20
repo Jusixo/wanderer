@@ -1,22 +1,14 @@
 #Wanderer
 
+##Wanderer is a social Marketing app that gives people at outdoor events and festivals access to a self flying drones Camera feed.
 
-###still need!
+###*People will see a live stream of the event and take photos with the press of a button with the ability to favorite photos and receive them via email*
 
-use shrine to upload images to page from background folder(?).
--have images added to the database appear on the landing page with a live update not needing a page refresh
+###Marketing companies are able to set up a landing page with logos, links and marketing information that people can go on to the view their events stream. At the end of their event they'll receive a video and all the photos along with the names and emails of everyone that attended the event.
 
-
-
--make sure nested resources are all correct
-
-  Turn host into admin, give admin ability to adjust information about events.
-
-
--create favoriting system between user and photos / creating host form page.
-
-
-
--create mailer that sends users favorited photos
--
--create mailer that sends Hosts all photos and videos captured during the event, and email addresses.
+### This app requires these gems to function.
+- Artoo
+- Ffmpeg
+- OmniAuth
+- Shrine
+- minimagick
