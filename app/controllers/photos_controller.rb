@@ -36,7 +36,7 @@ class PhotosController < ApplicationController
     @photo = @event.photos.new(photo_params)
 
     if @photo.save
-      redirect_to root_path, notice: 'Photo was successfully added.'
+      redirect_to @event, notice: 'Photo was successfully added.'
     else
       render :new
     end
