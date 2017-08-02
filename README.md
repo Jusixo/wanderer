@@ -17,4 +17,16 @@
 
 *Sample of the landing page*
 
-<img src="" width="300">
+<img src="https://raw.githubusercontent.com/Jusixo/wanderer/master/app/assets/images/readme/landing.png" width="300">
+
+*Sample of events being hosted*
+
+<img src="https://raw.githubusercontent.com/Jusixo/wanderer/master/app/assets/images/readme/events.png" width="300">
+
+*Samples of the event page*
+
+<img src="https://raw.githubusercontent.com/Jusixo/wanderer/master/app/assets/images/readme/live%202.png" width="300">
+
+<img src="https://raw.githubusercontent.com/Jusixo/wanderer/master/app/assets/images/readme/live1.png" width="300">
+
+<img src="https://raw.githubusercontent.com/Jusixo/wanderer/master/app/assets/images/readme/mailer.png" width="300">
