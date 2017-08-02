@@ -6,9 +6,15 @@
 
 ###Marketing companies are able to set up a landing page with logos, links and marketing information that people can go on to the view their events stream. At the end of their event they'll receive a video and all the photos along with the names and emails of everyone that attended the event.
 
-### This app requires these gems to function.
+###This app requires these gems to function.
 - Artoo
 - Ffmpeg
 - OmniAuth
 - Shrine
 - minimagick
+
+##SCREEN CAPTURES:
+
+*Sample of the landing page*
+
+<img src="" width="300">
